@@ -353,9 +353,9 @@ For an integer represented using \(b\) bits, arithmetic complexity is often anal
 
 The number of operations required by an algorithm is expressed as a function of input size, such as:
 
-\[
+```\[
 T(n)=3n+5
-\]
+\]```
 
 This represents a running-time model in which work grows linearly with \(n\).
 
