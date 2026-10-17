@@ -353,23 +353,23 @@ For an integer represented using \(b\) bits, arithmetic complexity is often anal
 
 The number of operations required by an algorithm is expressed as a function of input size, such as:
 
-```\[
+$$
 T(n)=3n+5
-\]```
+$$
 
 This represents a running-time model in which work grows linearly with \(n\).
 
 For \(n=10\):
 
-\[
+$$
 T(10)=3(10)+5=35
-\]
+$$
 
 For \(n=100\):
 
-\[
+$$
 T(100)=3(100)+5=305
-\]
+$$
 
 As input size increases, the work increases according to the function. In asymptotic analysis, the constant factor and lower-order term are ignored, so \(3n+5\) is classified as \(\Theta(n)\).
 
@@ -420,9 +420,9 @@ The loop executes \(n\) times. If each iteration takes constant time, the total 
 
 Therefore,
 
-\[
+$$
 T(n)=an+b
-\]
+$$
 
 for suitable constants \(a\) and \(b\), and the complexity is \(\Theta(n)\).
 
@@ -482,17 +482,17 @@ Big O provides an asymptotic upper bound on a function's growth.
 
 Formally, \(f(n)=O(g(n))\) if there are positive constants \(c\) and \(n_0\) such that
 
-\[
+$$
 0\le f(n)\le c\,g(n),\quad n\ge n_0.
-\]
+$$
 
 In introductory algorithm analysis, Big O is commonly used to express an algorithm's worst-case growth, although the notation itself is not limited to worst-case analysis.
 
 Example:
 
-\[
+$$
 f(n)=3n^2+5n+2
-\]
+$$
 
 Its asymptotic upper bound is \(O(n^2)\).
 
@@ -502,15 +502,15 @@ Big Omega provides an asymptotic lower bound.
 
 Formally, \(f(n)=\Omega(g(n))\) if there are positive constants \(c\) and \(n_0\) such that
 
-\[
+$$
 0\le c\,g(n)\le f(n),\quad n\ge n_0.
-\]
+$$
 
 For example,
 
-\[
+$$
 3n^2+5n+2=\Omega(n^2).
-\]
+$$
 
 This means the function grows at least as fast as a constant multiple of \(n^2\), for sufficiently large \(n\).
 
@@ -520,17 +520,17 @@ Big Theta gives a tight asymptotic bound: the function is bounded both above and
 
 Formally,
 
-\[
+$$
 f(n)=\Theta(g(n))
-\]
+$$
 
 when \(f(n)=O(g(n))\) and \(f(n)=\Omega(g(n))\).
 
 For example,
 
-\[
+$$
 3n^2+5n+2=\Theta(n^2).
-\]
+$$
 
 This means its growth rate is quadratic.
 
@@ -590,9 +590,9 @@ The inner loop executes \(n\) times for each of the \(n\) outer iterations.
 
 Total operations:
 
-\[
+$$
 n\times n=n^2
-\]
+$$
 
 Complexity: \(\Theta(n^2)\).
 
@@ -681,9 +681,9 @@ FOR i ← 1 TO n
 
 The loop executes \(n\) times, and each iteration performs constant work.
 
-\[
+$$
 T(n)=an+b
-\]
+$$
 
 Therefore, the time complexity is \(\Theta(n)\).
 
@@ -697,9 +697,9 @@ FOR i ← 1 TO n
 
 The inner statement executes \(n^2\) times.
 
-\[
+$$
 T(n)=an^2+bn+c
-\]
+$$
 
 Therefore, the time complexity is \(\Theta(n^2)\).
 
@@ -713,21 +713,21 @@ WHILE i > 1
 
 After \(k\) iterations, the value is approximately
 
-\[
+$$
 \frac{n}{2^k}.
-\]
+$$
 
 The loop stops when the value reaches 1 or less:
 
-\[
+$$
 \frac{n}{2^k}\le 1.
-\]
+$$
 
 Thus,
 
-\[
+$$
 k\ge \log_2 n.
-\]
+$$
 
 The time complexity is \(\Theta(\log n)\).
 
